@@ -7,9 +7,10 @@ using System.Web.Http;
 using BusinessLayer;
 using WebPortalDBUae;
 
-namespace WebApi.Controllers
+
+namespace WebApiWithTokenAuthenctication.Controllers
 {
-   [Authorize]
+    //[Authorize]
     public class EmployeeController : ApiController
     {
 
@@ -111,7 +112,6 @@ namespace WebApi.Controllers
                 {
                     httpResponseMessage = Request.CreateErrorResponse(HttpStatusCode.NotFound, string.Format("Employee Id {0} Not Found ", id));
                 }
-
             }
             catch (Exception ex)
             {
