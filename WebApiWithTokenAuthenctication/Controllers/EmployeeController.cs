@@ -10,7 +10,7 @@ using WebPortalDBUae;
 
 namespace WebApiWithTokenAuthenctication.Controllers
 {
-    //[Authorize]
+    [Authorize]
     public class EmployeeController : ApiController
     {
 

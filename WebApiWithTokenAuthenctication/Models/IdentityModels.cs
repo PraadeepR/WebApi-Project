@@ -21,7 +21,7 @@ namespace WebApiWithTokenAuthenctication.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("users", throwIfV1Schema: false)
         {
         }
         

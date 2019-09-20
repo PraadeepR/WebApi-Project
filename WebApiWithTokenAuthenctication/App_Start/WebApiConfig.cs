@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using Microsoft.Owin.Security.OAuth;
 using Newtonsoft.Json.Serialization;
 
@@ -27,6 +28,11 @@ namespace WebApiWithTokenAuthenctication
             );
 
             config.Filters.Add(new RequireHttpsAttibute());
+
+            //EnableCorsAttribute corsAttribute = new EnableCorsAttribute("WebSite Name", "Accept Header, Content Type Header","GET,POST,PUT");
+
+            EnableCorsAttribute cors = new EnableCorsAttribute("*", "*", "*");
+            config.EnableCors(cors);
         }
     }
 }
